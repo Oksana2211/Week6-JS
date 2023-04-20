@@ -1,0 +1,28 @@
+.root {
+  background-color: rgb(226, 196, 255);
+  font-size: 1.5rem;
+}
+.h1 {
+  margin: 0%;
+}
+.cards {
+  padding-top: 5%;
+  text-align: center;
+  font-size: 1.7rem;
+}
+.card-list{
+  margin-left: 20%;
+  border: 1px solid rgb(87, 22, 95) ;
+  max-width: 60vw;
+  display: block;
+}
+.card-list__name{
+  padding: 5%;
+
+}
+.card-list__career{
+  padding: 5%;
+}
+.card-list__films{
+  padding: 5%;
+} 
