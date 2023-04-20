@@ -82,4 +82,4 @@ const addCard = (objItem, container) => {
   container.append(item);
 }
 
-// addCard(popularProducers , cardList);
+addCard(popularProducers1 , cardList);
