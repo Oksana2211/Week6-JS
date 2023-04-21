@@ -1,5 +1,5 @@
 .root {
-  background-color: rgb(248, 244, 252);
+  background-color: rgb(255, 251, 247);
   font-size: 1.5rem;
 }
 .text-title {
@@ -16,6 +16,7 @@
   margin-left: 15%;
   width: 70vw;
   background-image: url(/img/fon.jpg);
+  background-size: contain;
   color: rgb(0, 0, 0);
 }
 .title-h3 {
@@ -47,6 +48,7 @@
   align-self: center;
   text-decoration: none;
   background-color: #E7D3B9;
+  border: 2px solid #E7D3B9;
   color: #4d4643;
   border-radius: 25px;
   width: 15vw;
@@ -57,7 +59,6 @@
 .card-list__films:hover {
   border: 2px solid #887f7b;
   background: none;
-  transform: scale(1.1); 
 }
 .top-films {
   display: block;
