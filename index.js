@@ -46,84 +46,57 @@ const popularProducers = [
 ];
 
 
+//получаем основной контейнер(section), записываем в переменную
+const cardList = document.querySelector('.cards'); 
 
-const cardList = document.querySelector('.cards');
-
-
+//получаем каждый элемент из массива и записываем в соответствующий контейнер с помощью функции
 popularProducers.forEach((item) => {
 
+//создаем контейнер для информации о режиссерaх
 const blockProducers = document.createElement('div');
 blockProducers.className = "card-list";
 
-const nameProducers = document.createElement('div');
+//создаем контейнер для имени режиссера
+const nameProducers = document.createElement('span');
 nameProducers.className = "card-list__name";
-nameProducers.textContent = item.name;
+nameProducers.textContent = item.name;//берем имя из массива
 
-const careerProducers = document.createElement('div');
+//создаем контейнер для информации о карьере режиссера
+const careerProducers = document.createElement('span');
 careerProducers.className = "card-list__career";
-careerProducers.textContent = item.career;
+careerProducers.textContent = item.career;//берем информацию из массива
 
+//добавляем гиперссылку на фильмографию
 const filmsProducers = document.createElement('a');
 filmsProducers.className = "card-list__films";
 filmsProducers.textContent = "Фильмография";
-filmsProducers.href = item.films;
+filmsProducers.href = item.films;//берем ссылку из массива
 
+
+//добавляем элементы в родительский блок
 blockProducers.appendChild(nameProducers);
 blockProducers.appendChild(careerProducers);
 blockProducers.appendChild(filmsProducers);
+//добавляем блок с информацией в основной контейнер(section)
 cardList.appendChild(blockProducers);
-
 })
 
+
+//создаем новый массив для лучших фильмов каждого режиссера
 const topFilmsList = popularProducers.map((item) => item.top_rated_film);
 
-const titleFilmsList = document.createElement('h2');
+//записываем заголовок
+const titleFilmsList = document.createElement('h3');
 titleFilmsList.textContent = "Лучшие фильмы этих режиссеров";
-document.body.appendChild(titleFilmsList);
+titleFilmsList.className = "title-h3";
+cardList.appendChild(titleFilmsList);//добавляем заголовок в основной контейнер(section)
 
-// создаем список фильмов
-const topFilmsListItem = document.createElement('div');
+// создаем контейнер и записываем в него лучшие фильмы  
+const topFilmsListItem = document.createElement('span');
 topFilmsListItem.innerHTML = topFilmsList;
-document.body.appendChild(topFilmsListItem);
+cardList.appendChild(topFilmsListItem);//добавляем контейнер с фильмами в основной контейнер(section)
 
 
-
-
-
-
-
-
-
-
-
-
-// const createCard = (obj) => {
-//   const block = document.createElement('section');
-//   block.className = "card-list";
-//   const name = document.createElement('span');
-//   name.className = "card-list__name";
-//   name.textContent = obj.name;
-//   const career = document.createElement('span');
-//   career.className = "card-list__career";
-//   career.textContent = obj.career;
-//   const films = document.createElement('span');
-//   films.className = "card-list__films";
-//   films.textContent = obj.films;
-
-//   block.append(name);
-//   block.append(career);
-//   block.append(films);
-//   return block;
-// }
-
-// const addCard = (objItem, container) => {
-// const item = createCard(objItem);
-// container.append(item);
-// }
-
-// popularProducers.forEach((element) => {
-//   addCard(element, cardList);
-// });
 
 
 
