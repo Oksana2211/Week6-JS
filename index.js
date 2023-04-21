@@ -83,7 +83,7 @@ cardList.appendChild(blockProducers);
 
 
 //создаем новый массив для лучших фильмов каждого режиссера
-const topFilmsList = popularProducers.map((item) => item.top_rated_film);
+const topFilmsList = popularProducers.map((item) => ' ' + item.top_rated_film);
 
 //записываем заголовок
 const titleFilmsList = document.createElement('h3');
@@ -93,7 +93,9 @@ cardList.appendChild(titleFilmsList);//добавляем заголовок в 
 
 // создаем контейнер и записываем в него лучшие фильмы  
 const topFilmsListItem = document.createElement('span');
-topFilmsListItem.innerHTML = topFilmsList;
+topFilmsListItem.innerHTML = topFilmsList + '.';
+
+
 topFilmsListItem.className = "top-films";
 cardList.appendChild(topFilmsListItem);//добавляем контейнер с фильмами в основной контейнер(section)
 
