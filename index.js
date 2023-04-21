@@ -1,5 +1,5 @@
-const cardList = document.querySelector('.card-list');
-// console.log (cardList);
+
+
 const popularProducers = [
   {
     name: 'Стивен Спилберг',
@@ -45,41 +45,85 @@ const popularProducers = [
   },
 ];
 
-/* <section class="card-list">
-  <span class="card-list__name">Стивен Спилберг</span>
-  <span class="card-list__career">Продюсер, Режиссёр, Актёр, Сценарист, Монтажёр</span>
-  <span class="card-list__films">src</span>
-</section> */
 
-const popularProducers1 = [ {
-name: 'Стивен Спилберг',
-career: 'Продюсер, Режиссёр, Актёр, Сценарист, Монтажёр',
-films: 'https://ru.wikipedia.org/wiki/%D0%A4%D0%B8%D0%BB%D1%8C%D0%BC%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F_%D0%A1%D1%82%D0%B8%D0%B2%D0%B5%D0%BD%D0%B0_%D0%A1%D0%BF%D0%B8%D0%BB%D0%B1%D0%B5%D1%80%D0%B3%D0%B0',
-top_rated_film: 'Список Шиндлера'
-}]
 
-const createCard = (obj) => {
-  const block = document.createElement('section');
-  block.className = "card-list";
-  const name = document.createElement('span');
-  name.className = "card-list__name";
-  name.textContent = obj.name;
-  const career = document.createElement('span');
-  career.className = "card-list__career";
-  career.textContent = obj.career;
-  const films = document.createElement('span');
-  films.className = "card-list__films";
-  films.textContent = obj.films;
+const cardList = document.querySelector('.cards');
 
-  block.append(name);
-  block.append(career);
-  block.append(films);
-  return block;
-}
 
-const addCard = (objItem, container) => {
-  const item = createCard(objItem);
-  container.append(item);
-}
+popularProducers.forEach((item) => {
 
-addCard(popularProducers1 , cardList);
+const blockProducers = document.createElement('div');
+blockProducers.className = "card-list";
+
+const nameProducers = document.createElement('div');
+nameProducers.className = "card-list__name";
+nameProducers.textContent = item.name;
+
+const careerProducers = document.createElement('div');
+careerProducers.className = "card-list__career";
+careerProducers.textContent = item.career;
+
+const filmsProducers = document.createElement('a');
+filmsProducers.className = "card-list__films";
+filmsProducers.textContent = "Фильмография";
+filmsProducers.href = item.films;
+
+blockProducers.appendChild(nameProducers);
+blockProducers.appendChild(careerProducers);
+blockProducers.appendChild(filmsProducers);
+cardList.appendChild(blockProducers);
+
+})
+
+const topFilmsList = popularProducers.map((item) => item.top_rated_film);
+
+const titleFilmsList = document.createElement('h2');
+titleFilmsList.textContent = "Лучшие фильмы этих режиссеров";
+document.body.appendChild(titleFilmsList);
+
+// создаем список фильмов
+const topFilmsListItem = document.createElement('div');
+topFilmsListItem.innerHTML = topFilmsList;
+document.body.appendChild(topFilmsListItem);
+
+
+
+
+
+
+
+
+
+
+
+
+// const createCard = (obj) => {
+//   const block = document.createElement('section');
+//   block.className = "card-list";
+//   const name = document.createElement('span');
+//   name.className = "card-list__name";
+//   name.textContent = obj.name;
+//   const career = document.createElement('span');
+//   career.className = "card-list__career";
+//   career.textContent = obj.career;
+//   const films = document.createElement('span');
+//   films.className = "card-list__films";
+//   films.textContent = obj.films;
+
+//   block.append(name);
+//   block.append(career);
+//   block.append(films);
+//   return block;
+// }
+
+// const addCard = (objItem, container) => {
+// const item = createCard(objItem);
+// container.append(item);
+// }
+
+// popularProducers.forEach((element) => {
+//   addCard(element, cardList);
+// });
+
+
+
