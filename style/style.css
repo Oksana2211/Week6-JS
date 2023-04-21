@@ -1,41 +1,68 @@
 .root {
-  background-color: rgb(241, 229, 253);
+  background-color: rgb(248, 244, 252);
   font-size: 1.5rem;
 }
 .text-title {
   margin-top: 0%;
   margin-left: 25%;
 }
-.title-h3 {
-  text-align: center;
-}
 .questions {
   max-width: 50vw;
   margin-left: 25%;
 }
 .cards { 
-  border: 1px solid rgb(109, 29, 119) ;
-  
+  border: 2px solid #887f7b;
   margin-top: 10%;
   margin-left: 15%;
   width: 70vw;
-} 
+  background-image: url(/img/fon.jpg);
+  color: rgb(0, 0, 0);
+}
+.title-h3 {
+  font-size: 2rem;
+  text-align: center;
+}
+.img-icon{
+  width: 4vw;
+}
 .card-list{
   display: grid;
   grid-template-columns: 0.5fr 1fr 0.5fr;
   grid-template-rows: auto;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
+  padding: 2%;
+  border-bottom: 0.5px dashed #887f7b;
 }
+
 .card-list__name{
-  padding: 5%;
   text-align: center;
+  align-self: center;
 
 }
 .card-list__career{
-  padding: 5%;
- text-align: center;
+  align-self: center;
+  text-align: center;
 }
 .card-list__films{
-  padding: 5%;
+  align-self: center;
+  text-decoration: none;
+  background-color: #E7D3B9;
+  color: #4d4643;
+  border-radius: 25px;
+  width: 15vw;
+  height: 2.5vw;
   text-align: center;
+  padding-top: 3%;
 } 
+.card-list__films:hover {
+  border: 2px solid #887f7b;
+  background: none;
+  transform: scale(1.1); 
+}
+.top-films {
+  display: block;
+  text-align: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 2%;
+}

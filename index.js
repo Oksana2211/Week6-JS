@@ -94,6 +94,7 @@ cardList.appendChild(titleFilmsList);//добавляем заголовок в 
 // создаем контейнер и записываем в него лучшие фильмы  
 const topFilmsListItem = document.createElement('span');
 topFilmsListItem.innerHTML = topFilmsList;
+topFilmsListItem.className = "top-films";
 cardList.appendChild(topFilmsListItem);//добавляем контейнер с фильмами в основной контейнер(section)
 
 
