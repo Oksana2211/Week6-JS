@@ -26,16 +26,13 @@
 .img-icon{
   width: 4vw;
 }
-.icon-position1 {
-  position: relative;
-  left: 15vw;
-  top: 5.5vw;
+/* .icon-position1 {
+
 }
 .icon-position2 {
-  position: relative;
-  left: 51vw;
-  bottom: 5.5vw;
-}
+
+
+} */
 .card-list{
   display: grid;
   grid-template-columns: 0.5fr 1fr 0.5fr;
