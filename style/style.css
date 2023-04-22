@@ -26,6 +26,16 @@
 .img-icon{
   width: 4vw;
 }
+.icon-position1 {
+  position: relative;
+  left: 15vw;
+  top: 5.5vw;
+}
+.icon-position2 {
+  position: relative;
+  left: 51vw;
+  bottom: 5.5vw;
+}
 .card-list{
   display: grid;
   grid-template-columns: 0.5fr 1fr 0.5fr;
@@ -34,7 +44,6 @@
   padding: 2%;
   border-bottom: 0.5px dashed #887f7b;
 }
-
 .card-list__name{
   text-align: center;
   align-self: center;
@@ -54,16 +63,17 @@
   width: 15vw;
   height: 2.5vw;
   text-align: center;
-  padding-top: 3%;
+  padding-top: 4%;
 } 
 .card-list__films:hover {
   border: 2px solid #887f7b;
   background: none;
+  font-size: 1.7rem;
 }
 .top-films {
   display: block;
   text-align: center;
   padding-left: 5%;
   padding-right: 5%;
-  padding-bottom: 2%;
+  padding-bottom: 5%;
 }

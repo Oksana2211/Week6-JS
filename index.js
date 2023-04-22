@@ -89,12 +89,20 @@ const topFilmsList = popularProducers.map((item) => ' ' + item.top_rated_film);
 const titleFilmsList = document.createElement('h3');
 titleFilmsList.textContent = "Лучшие фильмы этих режиссеров";
 titleFilmsList.className = "title-h3";
+const iconFilm1 = document.createElement('img');
+iconFilm1.className = "img-icon icon-position1";
+iconFilm1.src = "/img/medal.png";
+const iconFilm2 = document.createElement('img');
+iconFilm2.className = "img-icon icon-position2";
+iconFilm2.src = "/img/medal.png";
+
+cardList.appendChild(iconFilm1);
 cardList.appendChild(titleFilmsList);//добавляем заголовок в основной контейнер(section)
+cardList.appendChild(iconFilm2);
 
 // создаем контейнер и записываем в него лучшие фильмы  
 const topFilmsListItem = document.createElement('span');
 topFilmsListItem.innerHTML = topFilmsList + '.';
-
 
 topFilmsListItem.className = "top-films";
 cardList.appendChild(topFilmsListItem);//добавляем контейнер с фильмами в основной контейнер(section)
