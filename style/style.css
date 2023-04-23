@@ -26,13 +26,6 @@
 .img-icon{
   width: 4vw;
 }
-/* .icon-position1 {
-
-}
-.icon-position2 {
-
-
-} */
 .card-list{
   display: grid;
   grid-template-columns: 0.5fr 1fr 0.5fr;
